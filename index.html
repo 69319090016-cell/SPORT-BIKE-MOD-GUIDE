@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="th">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Sport Bike Mod Guide | หน้าแรก</title>
+<!-- แนะนำให้ใส่ ./ นำหน้าเพื่อให้ดึงไฟล์จากโฟลเดอร์ปัจจุบัน -->
+    <link rel="stylesheet" href="./css/style.css">
+    <script defer src="js/script.js"></script>
+</head>
+
+<body>
+    <!-- ฉากดำ overlay สำหรับทำเอฟเฟกต์ Fade เปลี่ยนพื้นหลัง -->
+    <div class="page-overlay" id="pageOverlay"></div>
+
+    <header class="nav">
+        <div class="container nav-in">
+            <a class="logo" href="index.html">SPORT BIKE <span>MOD</span> GUIDE</a>
+            <nav class="links">
+                <a href="#brands">แบรนด์</a>
+                <a href="#about">เกี่ยวกับ</a>
+                <a href="#media">สื่อ</a>
+                <a href="form.html">แบบฟอร์ม</a>
+            </nav>
+        </div>
+    </header>
+
+    <main id="home">
+        <section class="hero">
+            <div class="container">
+                <div class="eyebrow">SPORT BIKE EXTERIOR MOD GUIDE</div>
+                <h1>แต่งรถให้เป็น<br><span>สไตล์ของคุณ</span></h1>
+                <p>เว็บไซต์แนะนำของแต่งภายนอกสำหรับ Sport Bike เลือกแบรนด์ → รุ่น → Generation → ดูพาร์ตที่เหมาะกับรถ</p>
+                <a class="btn" href="#brands">เลือกแบรนด์</a> 
+                <a class="btn outline" href="docs/r15-v3-mod-guide.pdf" download>ดาวน์โหลดคู่มือ PDF</a>
+            </div>
+        </section>
+
+        <section id="brands" class="section">
+            <div class="container">
+                <div class="heading">
+                    <div class="label">SELECT YOUR BRAND</div>
+                    <h2>เลือก <span>แบรนด์</span></h2>
+                    <p>กด Card เพื่อเข้าสู่หน้า HTML แยกของแต่ละยี่ห้อ</p>
+                </div>
+                <div class="brand-grid">
+                    <!-- เพิ่ม onclick switchBrand ก่อนเปลี่ยนหน้า -->
+                    <a class="card" href="brands/yamaha.html" onclick="switchBrand('yamaha');">
+                        <div class="art">YAMAHA</div>
+                        <div class="info">
+                            <h3>Yamaha</h3>
+                            <p>YZF-R Series</p>
+                            <span class="more">เข้าสู่หน้า YAMAHA →</span>
+                        </div>
+                    </a>
+                    <a class="card" href="brands/honda.html" onclick="switchBrand('honda');">
+                        <div class="art honda">HONDA</div>
+                        <div class="info">
+                            <h3>Honda</h3>
+                            <p>CBR Series</p>
+                            <span class="more">เข้าสู่หน้า HONDA →</span>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <section id="about" class="section dark">
+            <div class="container">
+                <div class="heading">
+                    <div class="label">PROJECT OVERVIEW</div>
+                    <h2>เกี่ยวกับ<span>เว็บไซต์</span></h2>
+                </div>
+                <div class="grid2">
+                    <div class="mod">
+                        <h3>แนวคิดโครงงาน</h3>
+                        <p>รวมข้อมูลรถ Sport Bike และแนะนำของแต่งภายนอก เช่น ชุดสี อกล่าง Aero Wing และชิ้นส่วนตกแต่ง โดยแยกข้อมูลตามยี่ห้อและรุ่น</p>
+                    </div>
+                    <div class="mod">
+                        <h3>โครงสร้างหน้าเว็บ</h3>
+                        <ol>
+                            <li>หน้าแรก</li>
+                            <li>หน้าแบรนด์</li>
+                            <li>หน้ารุ่น / Generation</li>
+                            <li>หน้าของแต่ง</li>
+                            <li>หน้าแบบฟอร์มและสื่อ</li>
+                        </ol>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="media" class="section">
+            <div class="container">
+                <div class="heading">
+                    <div class="label">MEDIA</div>
+                    <h2>ภาพและ<span>เสียง</span></h2>
+                </div>
+                <div class="grid2">
+                    <div><img class="hero-img" src="media/r15-v3.svg" alt="Yamaha YZF-R15 V3"></div>
+                    <div class="mod">
+                        <h3>Background Music</h3>
+                        <p>ตัวอย่างเพลงพื้นหลังแบบไฟล์ภายในเว็บไซต์</p>
+                        <audio id="bgMusic" src="media/ambient-bike.wav" loop controls style="width:100%;margin-top:15px"></audio>
+                        <button id="musicBtn" class="btn" onclick="toggleMusic()">▶ เปิดเพลง</button>
+                    </div>
+                </div>
+            </div>
+            <div class="card" style="margin-top: 30px;">
+                <iframe 
+                    class="video" 
+                    src="https://www.youtube-nocookie.com/embed/oiD1hMnTAsE?rel=0" 
+                    title="YouTube video player" 
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                    referrerpolicy="strict-origin-when-cross-origin"
+                    allowfullscreen>
+                </iframe>            
+            </div>
+        </section>
+
+        <footer>
+            <div class="container">
+                <b>SPORT BIKE <span class="red">MOD</span> GUIDE</b>
+                <p>© 2026 Project Demo</p>
+            </div>
+        </footer>
+    </main>
+</body>
+
+</html>
