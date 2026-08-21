@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 450" width="100%" height="100%">
+  <defs>
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Kanit:wght@400;600&amp;family=Orbitron:wght@800&amp;display=swap');
+      .bg { fill: #18202a; }
+      .circle { fill: #00a2ff; opacity: 0.15; }
+      .brand { fill: #00a2ff; font-family: 'Orbitron', sans-serif; font-size: 28px; font-weight: 800; letter-spacing: 3px; }
+      .model { fill: #ffffff; font-family: 'Orbitron', sans-serif; font-size: 52px; font-weight: 800; }
+      .sub { fill: #8b9bb0; font-family: 'Kanit', sans-serif; font-size: 16px; letter-spacing: 2px; }
+      .line { stroke: #00a2ff; stroke-width: 6; fill: none; stroke-linecap: round; stroke-linejoin: round; }
+    </style>
+  </defs>
+  <rect class="bg" width="800" height="450" />
+  <circle class="circle" cx="600" cy="120" r="180" />
+  <polyline class="line" points="70,340 180,235 320,270 460,175 700,280" />
+  <text x="60" y="85" class="brand">YAMAHA</text>
+  <text x="60" y="145" class="model">YZF-R6</text>
+  <text x="60" y="395" class="sub">SPORT BIKE MOD GUIDE</text>
+</svg>

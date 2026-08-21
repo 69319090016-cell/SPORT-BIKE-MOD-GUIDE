@@ -1,0 +1,14 @@
+<!DOCTYPE html><html lang="th"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>แบบฟอร์มแนะนำพาร์ต</title><link rel="stylesheet" href="css/style.css"><script defer src="js/script.js"></script></head><body>
+<header class="nav"><div class="container nav-in"><a class="logo" href="index.html">SPORT BIKE <span>MOD</span> GUIDE</a><nav class="links"><a href="index.html">หน้าแรก</a><a href="brands/yamaha.html">Yamaha</a></nav></div></header>
+<section class="hero"><div class="container"><div class="eyebrow">USER FORM</div><h1>แบบฟอร์ม<span>แนะนำรถ</span></h1><p>ตัวอย่างการใช้ Form Controls ตามเกณฑ์การประเมิน</p></div></section>
+<section class="section"><div class="container"><form class="form" onsubmit="return showMessage()">
+<div class="field"><label for="name">ชื่อผู้ใช้งาน (Text Box)</label><input id="name" name="name" type="text" required></div>
+<div class="field"><label for="email">E-mail (Text Box)</label><input id="email" name="email" type="email"></div>
+<fieldset><legend>ประเภทของแต่งที่สนใจ (Check Boxes)</legend><div class="checks"><label><input type="checkbox" name="mod" value="fairing"> Fairing</label><label><input type="checkbox" name="mod" value="belly"> Belly Pan</label><label><input type="checkbox" name="mod" value="aero"> Aero Wing</label></div></fieldset>
+<fieldset><legend>สไตล์ที่ชอบ (Radio Boxes)</legend><div class="radios"><label><input type="radio" name="style" value="racing"> Racing</label><label><input type="radio" name="style" value="street"> Street</label><label><input type="radio" name="style" value="minimal"> Minimal</label></div></fieldset>
+<div class="field"><label for="brand">เลือกแบรนด์ (Drop Down)</label><select id="brand" name="brand"><option>Yamaha</option><option>Honda</option><option>Kawasaki</option><option>Suzuki</option><option>BMW</option></select></div>
+<div class="field"><label for="bike">เลือกกลุ่มรถ (Drop Down List Grouping)</label><select id="bike" name="bike"><optgroup label="Yamaha"><option>YZF-R15</option><option>YZF-R7</option><option>YZF-R1</option></optgroup><optgroup label="Honda"><option>CBR250RR</option><option>CBR650R</option><option>CBR1000RR-R</option></optgroup></select></div>
+<div class="field"><label for="comment">รายละเอียดเพิ่มเติม (Text Area)</label><textarea id="comment" rows="5"></textarea></div>
+<div id="formMessage" class="notice">กรอกข้อมูลแล้วกด Submit เพื่อทดสอบ JavaScript</div>
+<button type="submit" class="btn">Submit / Button</button> <button type="reset" class="btn outline">Reset</button>
+</form></div></section><footer><div class="container"><b>SPORT BIKE <span class="red">MOD</span> GUIDE</b></div></footer></body></html>

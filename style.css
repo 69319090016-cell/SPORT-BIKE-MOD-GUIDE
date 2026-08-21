@@ -1,0 +1,564 @@
+@import url('https://fonts.googleapis.com/css2?family=Kanit:wght@300;400;500;600;700&family=Orbitron:wght@500;600;700;800&display=swap');
+
+:root {
+  --bg: #080c11;
+  --bg2: #0d131b;
+  --card: #141b24;
+  --card2: #19222d;
+  --line: #283440;
+  --text: #f4f5f7;
+  --muted: #9da7b2;
+  --red: #ff3048;
+  --red2: #d91f36;
+  --green: #49d17d;
+  --max: 1180px;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: var(--bg);
+  color: var(--text);
+  font-family: "Kanit", Arial, sans-serif;
+  line-height: 1.6;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+/* Layout Containers */
+.container {
+  width: min(92%, var(--max));
+  margin: auto;
+}
+
+/* Navigation */
+.nav {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  background: rgba(8, 12, 17, 0.94);
+  backdrop-filter: blur(12px);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+.nav-in {
+  min-height: 70px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+}
+
+.logo {
+  font: 800 17px Orbitron, Arial, sans-serif;
+}
+
+.logo span,
+.red,
+.heading span {
+  color: var(--red);
+}
+
+.links {
+  display: flex;
+  gap: 22px;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.links a {
+  color: var(--muted);
+  font-size: 14px;
+}
+
+.links a:hover {
+  color: var(--red);
+}
+
+/* Hero Section */
+.hero {
+  padding: 88px 0 76px;
+  background: radial-gradient(circle at 75% 40%, rgba(255, 48, 72, 0.15), transparent 30%),
+              linear-gradient(135deg, #0b1017, #080b10);
+}
+
+.eyebrow,
+.label {
+  color: var(--red);
+  font: 700 11px Orbitron, Arial, sans-serif;
+  letter-spacing: 2px;
+  margin-bottom: 12px;
+}
+
+.hero h1 {
+  font-size: clamp(45px, 6vw, 78px);
+  line-height: 1;
+}
+
+.hero h1 span {
+  color: var(--red);
+}
+
+.hero p {
+  max-width: 700px;
+  color: var(--muted);
+  margin: 18px 0;
+  font-size: 16px;
+}
+
+/* Section Common */
+.section {
+  padding: 75px 0;
+}
+
+.dark {
+  background: var(--bg2);
+  border-block: 1px solid rgba(255, 255, 255, 0.04);
+}
+
+.heading {
+  margin-bottom: 30px;
+}
+
+.heading h2 {
+  font-size: 40px;
+  line-height: 1.1;
+}
+
+.heading p {
+  color: var(--muted);
+  margin-top: 6px;
+}
+
+/* Buttons */
+.btn {
+  display: inline-block;
+  border: 0;
+  border-radius: 6px;
+  padding: 10px 19px;
+  background: var(--red);
+  color: #fff;
+  font-weight: 600;
+  margin-top: 15px;
+  cursor: pointer;
+}
+
+.btn:hover {
+  background: var(--red2);
+}
+
+.btn.outline {
+  background: transparent;
+  border: 1px solid var(--line);
+}
+
+.btn.outline:hover {
+  border-color: var(--red);
+  color: var(--red);
+}
+
+/* Grids & Cards */
+.brand-grid {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 14px;
+}
+
+.card {
+  background: var(--card);
+  border: 1px solid var(--line);
+  border-radius: 10px;
+  overflow: hidden;
+  transition: 0.25s;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  border-color: rgba(255, 48, 72, 0.6);
+}
+
+.art {
+  height: 145px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font: 800 18px Orbitron;
+  background: linear-gradient(135deg, #17202b, #2a3440);
+}
+
+/* Brand Background Gradient Variants */
+.honda { background: linear-gradient(135deg, #19171a, #34262c); }
+.kawa  { background: linear-gradient(135deg, #111a15, #26342c); }
+.suzuki { background: linear-gradient(135deg, #151a22, #29303b); }
+.bmw   { background: linear-gradient(135deg, #121720, #2b3039); }
+
+.info {
+  padding: 17px;
+}
+
+.info h3 {
+  font-size: 20px;
+}
+
+.info p {
+  color: var(--muted);
+  font-size: 13px;
+}
+
+.more {
+  display: block;
+  color: var(--red);
+  font-size: 13px;
+  margin-top: 10px;
+}
+
+.grid3 {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 15px;
+}
+
+.grid2 {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+}
+
+.model-art {
+  height: 200px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font: 800 22px Orbitron;
+  background: linear-gradient(145deg, #131a23, #29333e);
+}
+
+.model-info {
+  padding: 18px;
+}
+
+.model-info h3 {
+  font-size: 23px;
+}
+
+.model-info p {
+  color: var(--muted);
+  font-size: 13px;
+}
+
+.tag {
+  display: inline-block;
+  color: var(--red);
+  border: 1px solid rgba(255, 48, 72, 0.4);
+  border-radius: 99px;
+  padding: 3px 9px;
+  font-size: 11px;
+  margin-top: 8px;
+}
+
+.mod {
+  background: var(--card);
+  border: 1px solid var(--line);
+  border-radius: 10px;
+  padding: 22px;
+  min-height: 150px;
+}
+
+.modno {
+  color: var(--red);
+  font: 700 11px Orbitron;
+}
+
+.mod h3 {
+  font: 700 18px Orbitron;
+  margin: 20px 0 5px;
+}
+
+.mod p {
+  color: var(--muted);
+  font-size: 13px;
+}
+
+.hero-img {
+  width: 100%;
+  height: 320px;
+  object-fit: cover;
+  border: 1px solid var(--line);
+  border-radius: 10px;
+  background: #111820;
+}
+
+/* Tables */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  background: var(--card);
+  border: 1px solid var(--line);
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+th, td {
+  border: 1px solid var(--line);
+  padding: 12px;
+  text-align: left;
+}
+
+th {
+  background: #202a35;
+  color: #fff;
+}
+
+td {
+  color: #d7dce1;
+}
+
+/* Forms */
+.form {
+  background: var(--card);
+  border: 1px solid var(--line);
+  border-radius: 10px;
+  padding: 24px;
+}
+
+.field {
+  margin-bottom: 16px;
+}
+
+.field label {
+  display: block;
+  color: var(--muted);
+  font-size: 13px;
+  margin-bottom: 6px;
+}
+
+input[type=text],
+input[type=email],
+select,
+textarea {
+  width: 100%;
+  background: #0b1118;
+  color: var(--text);
+  border: 1px solid var(--line);
+  border-radius: 6px;
+  padding: 10px 12px;
+  outline: 0;
+}
+
+input:focus,
+select:focus,
+textarea:focus {
+  border-color: var(--red);
+}
+
+.checks,
+.radios {
+  display: flex;
+  gap: 16px;
+  flex-wrap: wrap;
+  color: #d7dce1;
+  font-size: 14px;
+}
+
+.checks label,
+.radios label {
+  display: flex;
+  gap: 6px;
+  align-items: center;
+}
+
+fieldset {
+  border: 1px solid var(--line);
+  padding: 18px;
+  border-radius: 8px;
+  margin-bottom: 16px;
+}
+
+legend {
+  padding: 0 8px;
+  color: var(--red);
+}
+
+/* Media Elements */
+iframe {
+  width: 100%;
+  min-height: 360px;
+  border: 1px solid var(--line);
+  border-radius: 10px;
+  background: #111;
+}
+
+.video {
+  aspect-ratio: 16/9;
+  width: 100%;
+  border: 0;
+  border-radius: 10px;
+}
+
+/* Utility UI Elements */
+.notice {
+  background: #111923;
+  border-left: 4px solid var(--red);
+  padding: 16px;
+  color: var(--muted);
+  border-radius: 4px;
+}
+
+.download {
+  display: flex;
+  gap: 15px;
+  align-items: center;
+  background: var(--card);
+  border: 1px solid var(--line);
+  padding: 18px;
+  border-radius: 10px;
+}
+
+footer {
+  padding: 35px 0;
+  background: #070a0e;
+  border-top: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+footer p {
+  color: var(--muted);
+  font-size: 12px;
+}
+
+.badge {
+  font-size: 11px;
+  color: var(--green);
+  border: 1px solid rgba(73, 209, 125, 0.3);
+  padding: 3px 8px;
+  border-radius: 99px;
+}
+
+/* Media Queries */
+@media (max-width: 1000px) {
+  .brand-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+  .grid3 {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 700px) {
+  .links {
+    display: none;
+  }
+  .brand-grid,
+  .grid3,
+  .grid2 {
+    grid-template-columns: 1fr;
+  }
+  .hero {
+    padding: 65px 0;
+  }
+  .section {
+    padding: 55px 0;
+  }
+  .hero-img {
+    height: 230px;
+  }
+}
+
+/* ปรับแต่ง iframe วิดีโอให้ยืดหยุ่นและแสดงผลสวยงาม */
+.video {
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  border: 0;
+  border-radius: 10px;
+  display: block;
+}
+
+.hero {
+  position: relative;
+  min-height: 80vh; /* ความสูงของส่วน Hero */
+  display: flex;
+  align-items: center;
+  padding: 100px 0;
+  
+  /* ใส่ Overlay สีดำโปร่งแสงซ้อนทับรูปภาพ */
+  background: 
+    linear-gradient(
+      180deg, 
+      rgba(8, 12, 17, 0.7) 0%,     /* สีเข้มด้านบน */
+      rgba(8, 12, 17, 0.85) 100%   /* สีเข้มด้านล่าง */
+    ),
+    url('https://storagetym.blob.core.windows.net/www2021/images/picture-for-blogs-2021/yamaha_blog_r_series/blog-r-series-boxza-800x420.jpg?sfvrsn=eb190f80_2') no-repeat center center; /* เปลี่ยน URL เป็นรูปภาพของคุณ */
+  
+  background-size: cover;
+  background-attachment: fixed; /* (Optional) เพิ่ม Effect พารัลแลกซ์เวลากลอกหน้าจอ */
+}
+
+/* ปรับแต่งตัวอักษรเพิ่มเติมให้ได้ฟีล Racing/Cyberpunk */
+.eyebrow {
+  color: #00a2ff; /* เปลี่ยนเป็นสีฟ้าตามธีม */
+  font: 700 13px 'Orbitron', sans-serif;
+  letter-spacing: 3px;
+  margin-bottom: 12px;
+}
+
+.hero h1 {
+  font-family: 'Orbitron', sans-serif;
+  font-size: clamp(48px, 8vw, 90px);
+  font-weight: 800;
+  line-height: 1;
+  color: #ffffff;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+.hero h1 span {
+  color: #ff3048; /* สีแดงเรืองแสง */
+  text-shadow: 0 0 20px rgba(255, 48, 72, 0.6); /* เพิ่ม Effect แสงเรืองรอง */
+}
+
+.hero p {
+  max-width: 600px;
+  color: #c2c9d6;
+  margin: 20px 0 30px;
+  font-size: 15px;
+  line-height: 1.6;
+}
+
+/* ฉากดำ overlay สำหรับทำเอฟเฟกต์สลับหน้า */
+.page-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background-color: #000;
+  z-index: 9999;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.4s ease-in-out;
+}
+
+.page-overlay.active {
+  opacity: 1;
+  pointer-events: all;
+}
+
+/* เพิ่ม Transition ให้พื้นหลัง Hero เปลี่ยนแบบนุ่มนวล */
+.hero {
+  transition: background-image 0.5s ease;
+}
